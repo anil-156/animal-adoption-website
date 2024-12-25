@@ -1,0 +1,113 @@
+html,body{
+    padding:0;
+    margin:0;
+    background-color: rgba(235, 249, 252, 0.595);
+}
+body{
+    font-family: sans-serif;
+}
+.hero{
+    background-color: rgb(237, 12, 207);
+    color:#ffff;
+    padding: 50px 30px;
+    text-align: center;
+    position:relative;
+    margin-bottom: 15px;
+}
+.hero h1{
+    font-weight: normal;
+    font-size: 3rem;
+    margin: 0;
+}
+.hero h2{
+    font-weight: normal;
+    font-size: 1.9rem;
+    margin:0;
+}
+.filter-nav{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.filter-nav a{
+    text-decoration: none;
+    padding:9px;
+    color: rgb(237, 12, 207);
+    border: 1px solid rgb(237, 12, 207);
+    border-radius: 4px;
+    margin: 4px;
+}
+.filter-nav a:hover{
+    background-color: rgb(218, 114, 192);
+}
+.filter-nav .active{
+    background-color:rgb(237, 12, 207);
+    color: #ffff;
+}
+.filter-nav .active:hover{
+    background-color: rgb(237, 12, 207);
+    cursor: default;
+}
+.animals{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.animal-card{
+    display:grid;
+    margin-bottom: 30px;
+    grid-template-columns:200px 1fr;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.animal-card-photo{
+    order: 1;
+    grid-row: 1;
+    overflow: hidden;
+}
+.animal-card-photo img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3 sec ease-in-out;
+}
+.animal-card:hover img{
+    transform: rotate(15deg) scale(1.5);
+}
+.animal-card-text{
+    padding: 20px 25px;
+}
+.animal-card-text h3{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 1.8 rem;
+}
+.animal-card-text small{
+    color: rgba(167, 164, 162, 0.662);
+}
+.animal-card-text p{
+    margin: .8 rem 0;
+    padding: 0;
+    line-height: 1.5;
+}
+.primary-btn{
+    background:linear-gradient(rgb(196, 73, 173),rgb(39, 81, 129));
+    padding: 10px;
+    color: #ffff;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+.primary-btn:hover{
+    background: linear-gradient(rgb(221, 127, 192),rgb(184, 88, 181));
+}
+@media screen and(min-width:768px){
+    .animal-card{
+        grid-template-columns:200px 1fr;
+    }
+    .hero h1{
+        font-size: 6rem;
+    }
+}
